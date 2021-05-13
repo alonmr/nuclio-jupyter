@@ -38,8 +38,10 @@ def build_file(filename='', name='', handler='', archive=False, project='',
 
     if not filename:
         kernel = get_ipython()
+        print(kernel)
         if kernel:
             filename = notebook_file_name(kernel)
+            print(filename)
         else:
             raise ValueError('please specify file name/path/url')
 
